@@ -152,7 +152,23 @@
     </div>
     <script>
         $(document).ready(function () {
-            // Alternar o menu mobile
+
+            if (window.innerWidth <= 768) {
+                $(".ramos-grid").css({
+                    "display": "flex",
+                    "flex-wrap": "wrap",
+                    "justify-content": "space-between"
+                });
+                $(".ramo").css({
+                    "width": "35%",
+                });
+                $(".contact-form input").css({
+                    "width": "auto",
+                });
+                $(".contact-form textarea").css({
+                    "width": "auto",
+                });
+            }
             $('#menuToggle').click(function () {
                 $('#menuMobile').toggleClass('active');
             });

@@ -235,3 +235,89 @@ input:focus, textarea:focus {
     border: 1px solid red;
     border-radius: 5px;
 }
+
+/* Estilo do Menu Hamburguer */
+.menu-toggle {
+    display: none; /* Oculta o ícone em telas maiores */
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: #00BF63;
+    cursor: pointer;
+}
+
+.menu-mobile {
+    display: none; /* Oculta o menu mobile por padrão */
+    position: fixed;
+    top: 80px; /* Ajuste conforme a altura do header */
+    right: 0;
+    background-color: white;
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.menu-mobile.active {
+    display: block; /* Exibe o menu quando ativo */
+}
+
+.menu-mobile ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.menu-mobile ul li {
+    margin: 10px 0;
+}
+
+.menu-mobile ul li a {
+    color: #00BF63;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Ajustes para telas menores */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block; /* Exibe o ícone em telas menores */
+    }
+
+    #menuDesktop {
+        display: none; /* Oculta o menu desktop em telas menores */
+    }
+
+    .box-banner h1 {
+        font-size: 24px; /* Reduz o tamanho do título */
+        text-align: center;
+    }
+
+    .box-banner p {
+        font-size: 16px; /* Reduz o tamanho do parágrafo */
+        text-align: center;
+    }
+
+    .ramos-grid {
+        grid-template-columns: 1fr; /* Uma coluna em telas menores */
+    }
+
+    .about {
+        width: 90%; /* Aumenta a largura do conteúdo em telas menores */
+    }
+
+    #contactForm {
+        width: 90%; /* Aumenta a largura do formulário em telas menores */
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        font-size: 14px; /* Reduz o tamanho da fonte dos inputs */
+    }
+
+    .contact-form button {
+        width: 100%; /* Botão ocupa toda a largura */
+    }
+}

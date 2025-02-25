@@ -18,7 +18,20 @@
                     <span class="logo logo_2">23</span>
                 </div>
             </div>
+            <!-- Ícone do Menu Hamburguer -->
+            <button id="menuToggle" class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            <!-- Menu Desktop -->
             <nav id="menuDesktop">
+                <ul>
+                    <li><a href="#ramos">Soluções</a></li>
+                    <li><a href="#about">Sobre Nós</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </nav>
+            <!-- Menu Mobile -->
+            <nav id="menuMobile" class="menu-mobile">
                 <ul>
                     <li><a href="#ramos">Soluções</a></li>
                     <li><a href="#about">Sobre Nós</a></li>
@@ -30,11 +43,11 @@
         <section id="home" class="box-top-spacing box-banner">
             <div class="box-banner-content">
                 <div class="icon">
-                    <i style="color: white;" class="fas fa-cogs icone-grande"></i> <!-- Ícone de engrenagens -->
+                    <i style="color: white;" class="fas fa-cogs icone-grande"></i>
                 </div>
                 <h1>Especializada em desenvolvimento de software</h1>
                 <div class="icon">
-                    <i style="color: white;" class="fas fa-lightbulb icone-grande"></i> <!-- Ícone de cérebro -->
+                    <i style="color: white;" class="fas fa-lightbulb icone-grande"></i>
                 </div>
                 <p>Transformamos suas ideias em realidade digital.</p>
             </div>
@@ -139,9 +152,15 @@
     </div>
     <script>
         $(document).ready(function () {
-            if (window.matchMedia("(max-width: 768px)").matches) {
-                $("#menuDesktop").hide();
-            }
+            // Alternar o menu mobile
+            $('#menuToggle').click(function () {
+                $('#menuMobile').toggleClass('active');
+            });
+
+            $('#menuMobile ul li a').click(function () {
+                $('#menuMobile').removeClass('active');
+            });
+
             $('nav ul li a').on('click', function (event) {
                 event.preventDefault();
                 const target = $(this).attr('href');

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <title>Brasiltec 23 - Especializada em soluções de software web e mobile</title>
+</head>
+<body>
+    <div class="box">
+        <header>
+            <div class="box-flex">
+                <span class="logo logo_1">Brasiltec</span>
+                <div class="box-left-spacing">
+                    <span class="logo logo_2">23</span>
+                </div>
+            </div>
+            <nav id="menuDesktop">
+                <ul>
+                    <li><a href="#ramos">Soluções</a></li>
+                    <li><a href="#about">Sobre Nós</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </nav>
+        </header>
+        <div class="logo_3"></div>
+        <section id="home" class="box-top-spacing box-banner">
+            <div class="box-banner-content">
+                <div class="icon">
+                    <i style="color: white;" class="fas fa-cogs icone-grande"></i> <!-- Ícone de engrenagens -->
+                </div>
+                <h1>Especializada em desenvolvimento de software</h1>
+                <div class="icon">
+                    <i style="color: white;" class="fas fa-lightbulb icone-grande"></i> <!-- Ícone de cérebro -->
+                </div>
+                <p>Transformamos suas ideias em realidade digital.</p>
+            </div>
+        </section>
+        <div class="box-top-spacing logo_3"></div>
+        <section id="ramos">
+            <div class="box-title">
+                <h3 class="main-title">Soluções nos segmentos</h3>
+            </div>
+            <div class="ramos-grid">
+                <div class="ramo">
+                    <div class="icone">
+                        <i class="fa-solid fa-coins"></i>
+                    </div>
+                    <h3>Finanças</h3>
+                    <p>Soluções para gestão financeira, sistemas de pagamento, etc.</p>
+                </div>
+                <div class="ramo">
+                    <div class="icone">
+                        <i class="fas fa-sitemap"></i> 
+                    </div>
+                    <h3>Gestão de Empresas</h3>
+                    <p>Sistemas de ERP, gestão de processos, etc.</p>
+                </div>
+                <div class="ramo">
+                    <div class="icone">
+                        <i class="fas fa-store"></i>
+                    </div>
+                    <h3>Varejo</h3>
+                    <p>Plataformas de gestão de estoque, PDV, etc.</p>
+                </div>
+                <div class="ramo">
+                    <div class="icone">
+                        <i class="fas fa-cart-shopping"></i>
+                    </div>
+                    <h3>E-commerce</h3>
+                    <p>Desenvolvimento de lojas virtuais, integração com marketplaces, etc.</p>
+                </div>
+                <div class="ramo">
+                    <div class="icone">
+                        <i class="fas fa-stethoscope"></i>
+                    </div>
+                    <h3>Saúde</h3>
+                    <p>Sistemas de gestão hospitalar, prontuários eletrônicos, etc.</p>
+                </div>
+                <div class="ramo">
+                    <div class="icone icone-educacao">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3>Educação</h3>
+                    <p>Plataformas de ensino online, gestão acadêmica, etc.</p>
+                </div>
+            </div>
+        </section>
+        <div class="box-top-spacing logo_3"></div>
+        <section id="about" class="about-section">
+            <div class="box-title">
+                <h3 class="main-title">Sobre Nós</h3>
+            </div>
+                <div class="about">
+                    <p>
+                        A <strong>Brasiltec 23</strong> nasceu da paixão por tecnologia e da vontade de transformar ideias em soluções reais. Fundada em 2023, nossa empresa surgiu com o objetivo de oferecer serviços de desenvolvimento e sustentação de sistemas web e mobile, atendendo às necessidades de diversos setores, desde pequenas empresas até grandes corporações.
+                    </p>
+                    <p>
+                        Ao longo dos anos, construímos uma trajetória de sucesso, baseada na inovação, qualidade e comprometimento com nossos clientes. Acreditamos que a tecnologia é a chave para o crescimento e a eficiência, e estamos aqui para ajudar você a alcançar seus objetivos.
+                    </p>
+                <div class="valores">
+                    <div class="valor">
+                        <i class="fas fa-lightbulb icone-grande"></i>
+                        <h3>Inovação</h3>
+                    </div>
+                    <div class="valor">
+                        <i class="fas fa-handshake icone-grande"></i>
+                        <h3>Parceria</h3>
+                    </div>
+                    <div class="valor">
+                        <i class="fas fa-chart-line icone-grande"></i>
+                        <h3>Resultados</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="box-top-spacing logo_3"></div>
+        <section id="contato" class="contact-section">
+            <div class="box-title">
+                <h3 class="main-title">Entre em contato</h3>
+            </div>
+            <div class="contact-form">
+                <form id="contactForm">
+                    <input type="text" id="name" placeholder="Seu Nome" required>
+                    <input type="email" id="email" placeholder="Seu E-mail" required>
+                    <textarea id="message" placeholder="Sua Mensagem" required></textarea>
+                    <button type="submit">Enviar</button>
+                </form>
+                <div id="statusMessage" class="message"></div>
+            </div>
+        </section>
+        <div class="box-top-spacing logo_3"></div>
+        <footer>
+            <p>&copy; 2023 Brasiltec 23 ltda. Todos os direitos reservados.</p>
+        </footer>
+    </div>
+    <script>
+        $(document).ready(function () {
+            if (window.matchMedia("(max-width: 768px)").matches) {
+                $("#menuDesktop").hide();
+            }
+            $('nav ul li a').on('click', function (event) {
+                event.preventDefault();
+                const target = $(this).attr('href');
+                const offset = $(target).offset().top;
+                $('html, body').animate({
+                    scrollTop: offset
+                }, 1000);
+            });
+
+            emailjs.init('izH6PeuFhKjUWBVcY');
+
+            document.getElementById('contactForm').addEventListener('submit', function (event) {
+                event.preventDefault();
+
+                const formData = {
+                    name: document.getElementById('name').value,
+                    email: document.getElementById('email').value,
+                    message: document.getElementById('message').value,
+                };
+
+                emailjs.send('service_x5v7doo', 'template_j25w54w', formData)
+                    .then(function (response) {
+                        document.getElementById('statusMessage').innerHTML = 'Mensagem enviada com sucesso!';
+                        document.getElementById('statusMessage').classList.add('success');
+                        document.getElementById('statusMessage').classList.remove('error');
+                        document.getElementById('contactForm').reset();
+                    }, function (error) {
+                        document.getElementById('statusMessage').innerHTML = 'Erro ao enviar a mensagem. Tente novamente.';
+                        document.getElementById('statusMessage').classList.add('error');
+                        document.getElementById('statusMessage').classList.remove('success');
+                    });
+            });
+        });
+    </script>
+</body>
+</html>
